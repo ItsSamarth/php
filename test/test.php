@@ -16,18 +16,3 @@
 		</form>
 </body>
 </html>
-
-
-
-<form action="demo.php" method="post">
-<?php
-
-foreach ( wc_get_order( $ordernumber )->get_items() as $item ){
-                echo "<input type='checkbox' name='productinfo[]' value='".$item->get_name(). $item->get_quantity() .$item->get_quantity()"'>";
-            }
-
-
-    ?>
-
-  <input type="submit" name="submit">
-</form>
