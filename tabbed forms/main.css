@@ -1,0 +1,78 @@
+/* GLOBAL STYLES */
+
+html *
+{
+  overflow-x: hidden;
+}
+
+a{
+  color: #000000 !important;
+}
+
+.navbar{
+  z-index: 1;
+}
+/* GLOBAL STYLES END */
+
+
+.tabs{
+    /* background-color: #f7f7f7; */
+    background-color: #ccd5ea6b;
+    /* background-color: #56585deb; */
+    padding-right: 0% !important;
+    height: -webkit-fill-available;
+    border-right: 1px solid #d4d4d4;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff !important;
+  background-color: #007bff;
+}
+
+.nab-pills > a {
+  color: #fff !important;
+}
+.tab-pane > .card , .tab-pane > h4{
+margin-top: 3%;
+background-color: #f7f7f9;
+}
+
+.tab-pane > h4 {
+height: 50px;
+padding: 1%;
+}
+
+.tab-content>.active {
+  margin: 0 3%;
+}
+
+.btn-add{
+  padding: 1% 7% !important;
+}
+
+
+.footer{
+  /* background-color: #f6f6f6; */
+  background-color: #0572e6;
+  color: #fff;
+  text-align: center;
+}
+
+.footer>p{
+  margin-top: 8px;
+}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+
+  .tab-content>.active {
+    margin-left: 3%;
+  }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+/* @media (max-width: 576px) { 
+
+
+} */
