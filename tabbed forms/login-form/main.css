@@ -1,12 +1,14 @@
 @font-face {
-    font-family: 'Acumin Pro';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Acumin Pro'), url('./fonts/Acumin-RPro.woff') format('woff');
-    }
-    
+  font-family: 'Acumin Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Acumin Pro'), url('./fonts/Acumin-RPro.woff') format('woff');
+}
+
 .login-section {
-    background-image: linear-gradient(to right top, #1465c0, #1569c5, #176dc9, #1872ce, #1976d3);
+  /* background-image: linear-gradient(to right top, #1465c0, #1569c5, #176dc9, #1872ce, #1976d3); */
+
+background-image: linear-gradient(to left, #1976d3 80%, #1363bc 100%);
 }
 
 
@@ -16,67 +18,102 @@
 /* * { box-sizing:border-box; } */
 
 /* form starting stylings ------------------------------- */
-.group 			  { 
-  position:relative; 
-  margin-bottom:30px; 
+.group {
+  position: relative;
+  margin-bottom: 30px;
 }
-input 				{
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
+
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
   caret-color: #f9fdff;
-  border-bottom:1px solid #f9fdff;
+  /* border-bottom: 1px solid #f9fdff; */
+  border-bottom: 1px solid #4896e1;
   background-color: transparent;
 
 }
-input:focus 		{ outline:none; }
+
+input:focus {
+  outline: none;
+}
 
 /* LABEL ======================================= */
-label 				 {
-  color:#f9fdff; 
-  font-size:16px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
+label {
+  color: #b6cce2;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+
+.end-label {
+  color: #b6cce2;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    right: 5px;
+    top: 10px;
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label 		{
-  top:-20px;
-  font-size:14px;
-  color:#f9fdff;
+input:focus~label,
+input:valid~label {
+  top: -20px;
+  font-size: 14px;
+  color: #f9fdff;
+}
+
+input, select, textarea{
+  color: #fff;
+}
+
+textarea:focus, input:focus {
+  color: #fff;
 }
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:300px; }
-.bar:before, .bar:after 	{
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:#f9fdff; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
+.bar {
+  position: relative;
+  display: block;
+  /* width: 300px; */
 }
-.bar:before {
-  left:50%;
-}
+
+.bar:before,
 .bar:after {
-  right:50%; 
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #f9fdff;
+  /* background-color: #4896e1; */
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
 }
 
 /* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
+input:focus~.bar:before,
+input:focus~.bar:after {
+  width: 50%;
 }
 
 
