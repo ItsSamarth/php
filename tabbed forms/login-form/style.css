@@ -37,8 +37,12 @@ body {
 }
 
 .reset {
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+
+.reset a {
   color: #72a8e4;
-  margin: 15% 0;
 }
 
 .reset button {
@@ -54,6 +58,10 @@ body {
 
 .reset span {
   color: #ffffff;
+}
+
+#register a {
+  color: #95c5ec !important;
 }
 
 .detail-section {

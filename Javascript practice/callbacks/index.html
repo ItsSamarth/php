@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CallBack</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 30px;
+            text-align: center;
+        }
+
+        div {
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn btn-primary">Check features</button>
+    <hr>
+    <div></div>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        //CALLBACKS
+        const button = document.querySelector("button");
+        const div = document.querySelector("div");
+
+        button.addEventListener("click", () => {
+            checkAuth(auth => {
+                if(auth) {
+                    fetchUser(user => {
+                        setText(user.name);
+                    },2000);
+                }
+            });
+        });
+
+
+        const fetchUser = cb => {
+            setText('fetching users...');
+            setTimeout( ()=>{
+                cb({
+                    name:'samarth'
+                });
+            },2000);
+        }
+
+
+        const setText = (text) => {
+            div.textContent = text;
+        }
+
+        const checkAuth = cb => {
+            setText('Checking Authentication');
+            setTimeout( ()=> {
+                cb(true);
+            },2000);
+        }
+
+    </script>
+
+
+</body>
+
+</html>
